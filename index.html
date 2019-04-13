@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Polygons using Openlayers</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js"></script>
+    <script src="./maptiks-mapbox-gl.min.js"></script>
+    <script>
+      maptiks.trackcode = "34df332a-8d40-4233-a6b9-7077d360c9e0";
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 80px 1fr 40px;
+        color: #555;
+
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+      }
+      .gap {
+        padding-left: 5px;
+      }
+      .decoration {
+        display: none;
+      }
+
+      @media (max-width: 800px) {
+        .decoration {
+          display: block;
+          background-color: #444;
+          height: 100%;
+          width: 30px;
+        }
+
+        h1 {
+          font-size: 1.2em;
+          padding: 0 24px;
+        }
+
+        footer {
+          padding-right: 10px !important;
+        }
+      }
+
+      #map {
+        height: 100%;
+        width: 100%;
+        border-top: 3px solid #555;
+        border-bottom: 2px solid #555;
+      }
+
+      footer {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 50px;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="decoration"></div>
+      <h1>Polygons using Openlayers</h1>
+    </header>
+    <div id="map"></div>
+    <footer></footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
